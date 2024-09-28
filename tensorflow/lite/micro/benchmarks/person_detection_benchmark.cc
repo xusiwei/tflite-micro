@@ -125,4 +125,7 @@ int main(int argc, char** argv) {
       reinterpret_cast<const int8_t*>(g_no_person_image_data), 10,
       "NoPersonDataIterations(10)", *benchmark_runner, profiler);
   MicroPrintf("");  // null MicroPrintf serves as a newline.
+
+  benchmark_runner->PrintAllocations();
+  return 0;
 }

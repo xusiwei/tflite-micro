@@ -99,8 +99,8 @@ def generate_array(input_fname):
 
 def get_array_name(input_fname):
   # Normalize potential relative path to remove additional dot.
-  abs_fname = os.path.abspath(input_fname)
-  base_array_name = 'g_' + abs_fname.split('.')[-2].split('/')[-1]
+  input_basename = os.path.basename(input_fname)
+  base_array_name = 'g_' + input_basename.split('.')[0]
   if input_fname.endswith('.tflite'):
     return [base_array_name + '_model_data', 'unsigned char']
   elif input_fname.endswith('.bmp'):

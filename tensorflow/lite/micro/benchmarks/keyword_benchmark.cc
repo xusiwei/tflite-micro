@@ -99,4 +99,5 @@ int main(int argc, char** argv) {
   MicroPrintf("");  // null MicroPrintf serves as a newline.
 
   benchmark_runner->PrintAllocations();
+  return 0;
 }
